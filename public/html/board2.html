@@ -4,10 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>lecture story</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/tob_bar.css">
-    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="../css/board2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
@@ -27,12 +26,12 @@
                 <option>2020-1학기</option>
                 <option>2019-2학기</option>
                 <option>2019-1학기</option>
-            </select>
+            </select>   
             <!--검색 바-->
             <div class="search_bar">
-                <form action="./select_lecture.html" method="post" onSubmit="register()">
-                    <input type="text" id="search" placeholder="추가하고 싶은 과목명을 입력하세요.">
-                    <button type="submit" id="btn_search"><i class="fa fa-search"></i></button>
+                <form action="./select_lecture.html" method="post" onSubmit = "register()" >
+                    <input type="text" id="search"  placeholder="추가하고 싶은 과목명을 입력하세요.">
+                    <button type="submit"  id="btn_search"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <!--아이콘 바-->
@@ -43,10 +42,10 @@
 
         </div>
         <div class="container">
-            <div class="sections"></div>
+            
         </div>
     </div>
-    <script type="text/javascript" src="../javascript/board.js"></script>
+    <script type="text/javascript" src="../javascript/board2.js"></script>
 </body>
 
 </html>

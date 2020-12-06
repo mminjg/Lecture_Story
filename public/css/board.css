@@ -3,25 +3,44 @@ a {
     color: black;
     text-decoration: none;
 }
+.container{
+    width: 80%;
+    margin: 30px auto;
+}
+.contents-area{
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 20px;
+}
+.contents-area h2{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
 /* 각각의 게시판 */
 .content {
-    width: 80%;
-    margin: 10px auto;
-    padding-bottom: 15px;
+    margin: 15px auto;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 3px;
+    height: auto;
+}
+.content:last-child{
+    margin-bottom: 0;
 }
 .content .title, .text{
     margin: 0 auto;
 }
 .content .title{
-    padding: 15px 0;
+    text-align: left;
+    padding: 20px 20px;
 }
 .content .title .name{
     position: relative;
     text-align: left;
-    z-index: 2;
+    display: inline-block;
 }
 .content .title .name span{
-    background: white;
     font-weight: bold;
 }
 .content .title .line{
@@ -30,25 +49,15 @@ a {
     border: 1px solid #bbbbbb;
     top: -10px;
 }
-.content .text{
-    background-color: #f1f1f1;
-    height: 120px;
-    border-radius: 15px;
-}
-.content .text p{
-    margin: 0 auto;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    word-wrap:normal;
-    text-align: left;
-    width:97%;
-    overflow:hidden;
-    line-height: 39px;
-}
-.content .text .line{
-    margin: 0 auto;
-    width: 98%;
+.content .title .delete-button{
+    float: right;
     position: relative;
-    background: #dcdcdc;
-    border: 0.1px solid #dcdcdc;
+    outline: none;
+    top: -1px;
+    cursor:pointer;
+    background: url("../imgs/trashcan.png") no-repeat;
+    background-size: 16px 20px;
+    width: 16px;
+    height: 20px;
+    border: none;
 }

@@ -11,12 +11,12 @@ html, body, .wrap {
     margin: 0 auto;
 }
 .content{
+    margin: 0 auto;
     width: 900px;
 }
 .content form{
     display:block;
-    margin: 0px auto;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 .content .top::after{
     display: block;
@@ -36,8 +36,10 @@ html, body, .wrap {
     border: 2px solid #AAAAAA;
     border-radius: 5px;
     float: left;
+    /* 커서 손모양으로 바꿈 */
+    cursor:pointer;
 }
-.content .top button{
+.content .top .submit{
     float: right;
     width: 120px;
     height: 35px;
@@ -48,6 +50,7 @@ html, body, .wrap {
     color: white;
     font-weight: bold;
     font-size: 1.1em;
+    cursor: pointer;
 }
 .content .text{
     height: 500px;
@@ -61,9 +64,20 @@ html, body, .wrap {
     border-radius: 15px;
     border: 0px;
     box-sizing: border-box;
-    font-size: 1.3em;
-    line-height: 1.4em;
+    font-size: 14px;
+    line-height: 150%;
 }
 .content .text textarea:focus{
     outline: none;
+}
+.input_tag {
+    width: 240px;
+    height: 32px;
+    padding: 0 10px;
+    margin-left: 15px;
+    font-size: 10pt;
+    color : #AAAAAA;
+    border: 2px solid #AAAAAA;
+    border-radius: 5px;
+    float: left;
 }

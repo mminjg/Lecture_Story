@@ -1,6 +1,6 @@
 html, body, .wrap {
     min-width: 769px;
-    height: 100%;
+    /* height: 100%; 내용이 비었는데 스크롤 생김 방지 */
     text-align: center;
     margin: 0;    
 }
@@ -37,6 +37,7 @@ html, body, .wrap {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    outline: none;
 }
 
 /*검색 바*/
@@ -59,8 +60,8 @@ html, body, .wrap {
 }
 .header .search_bar #search::placeholder {
     color: #AAAAAA;
-}
-.header .search_bar button{
+ }
+ .header .search_bar button{
     position: relative;
     left: -36px;
     border: 0 none;
@@ -81,6 +82,7 @@ html, body, .wrap {
     float: right;
 }
 .header .icons #logout-button { 
+    /* border: 2px  #AAAAAA solid; */
     cursor: pointer;
     background: transparent;
     color: #fff;
@@ -91,53 +93,12 @@ html, body, .wrap {
     vertical-align: middle;
     margin-right: 10px;
 }
+
 .container {
     min-height: 100%; /* 사이트의 최소 높이값을 100% */
-    padding-top: 110px;
+    padding-top: 60px;
     box-sizing: border-box;
     padding-bottom: 30px;
-}
-.menu {
-    z-index: 4;
-    position: fixed;
-    top: 60px; right: 0; left: 0;
-    background: white;
-    border-bottom: 2px solid #e0dddd;
-    box-sizing: border-box;
-    height: 50px;
-}
-.subject{
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    float: left;
-    font-weight: bold;
-}
-
-.menu .navi li{
-    display: inline-block;
-}
-.menu .navi li a{
-    display: block;
-    height: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 16px 9px;
-    margin: 0 20px;
-    color: #00462A;
-    box-sizing: border-box;
-}
-
-.menu .navi a:hover, .active{ /* */
-    font-weight: bold;
-    border-bottom: 3px solid #00462A;
-}
-
-.menu .write{
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    float: right;
 }
 
 .semester{

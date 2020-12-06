@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>lecture story</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/tob_bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <div class="wrap">
         <div class="header">
-            <img id="logo" src= "../imgs/logo-white.png">
+            <a href="board.html"><img id="logo" src="../imgs/logo-white.png"></a>
             <!--학기 드롭다운-->
             <select>
                 <option selected>2020-2학기</option>
@@ -26,9 +27,7 @@
             </div>
             <!--아이콘 바-->
             <div class="icons">
-                <button type="button" id="noti"><i class="fa fa-bell fa-2x"></i></button>
-                <button type="button" id="setting"><i class="fa fa-cog fa-2x"></i></button>
-                <button type="button" id="user"><i class="fa fa-user-circle fa-2x"></i></button>
+                <div id="logout-button" onclick="logOut()">Log Out</div>
             </div>
         </div>
         <div class="container">

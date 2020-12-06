@@ -3,21 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>lecture story</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/read_post.css">
     <link rel="stylesheet" href="../css/tob_bar_sub_bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 </head>
 <body>
     <div class="wrap">
         <div class="header">
-            <img id="logo" src="../imgs/logo-white.png">
-            <!--학기 드롭다운-->
-            <select>
-                <option selected>2020-2학기</option>
-                <option>2020-1학기</option>
-                <option>2019-2학기</option>
-                <option>2019-1학기</option>
+            <a href="board.html"><img id="logo" src="../imgs/logo-white.png"></a>
+             <!--학기 드롭다운-->
+            <select class="semester" onchange="change_tag()">
+                <option id="2020_2">2020-2학기</option>
+                <option id="2020_1">2020-1학기</option>
+                <option id="2019_2">2019-2학기</option>
+                <option id="2019_1">2019-1학기</option>
             </select>
             <!--검색 바-->
             <div class="search_bar">
@@ -28,75 +33,27 @@
             </div>
             <!--아이콘 바-->
             <div class="icons">
-                <button type="button" id="noti"><i class="fa fa-bell fa-2x"></i></button>
-                <button type="button" id="setting"><i class="fa fa-cog fa-2x"></i></button>
-                <button type="button" id="user"><i class="fa fa-user-circle fa-2x"></i></button>
+                <div id="logout-button" onclick="logOut()">Log Out</div>
             </div>
         </div>
         <!--메뉴 바-->
         <div class="menu">
-            <span class="subject">통계학 (01) - 김이화 교수님</span>
+            <span class="subject" id="subject"></span>
             <nav>
                 <ul class="navi">
-                    <li><a class="active" id="timeline" href="#"><span>타 임 라 인</span></a></li>
-                    <li><a id="grade" href="#"><span>성 적 통 계</span></a></li>
-                    <li><a id="eval" href="#"><span>강 의 평 가</span></a></li>
+                    <li><a class="active" id="timeline" href="timeline.html"><span>타 임 라 인</span></a></li>
+                    <li><a id="grade" href="statistics.html"><span>성 적 통 계</span></a></li>
+                    <li><a id="eval" href="evaluation.html"><span>강 의 평 가</span></a></li>
                 </ul>
             </nav>
-            <a class="write" href="#">
-                <img src="../imgs/pencil.png" width=24px height=24px alt="글쓰기">
-            </a>
-
         </div>
         <!-- 여기까지 툴바 -->
         <div class="container">
             <div class="content">
-                <!-- 여기에 게시글 -->
-                <div class="origin_post">
-                    <span class="contents">하나도 모르겠어ㅠㅠ</span>
-                    <span class="edit_button">
-                        <button type="button" >수정</button>
-                        <button type="button" >삭제</button>
-                    </span>
-                    <div>
-                        <p class="date"> 2020/11/12
-                        <span class="like-comment">
-                            <img src="../imgs/like.png">0
-                            <img src="../imgs/comment.png">3
-                        </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 여기는 댓글 -->
-                <ul class="comments">
-                    <li>
-                        <div class="post">
-                            <span class="contents">css누가 만들었어ㅠㅠㅠ</b></span>
-                            <div>
-                                <p class="date"> 2020/11/12</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post">
-                            <span class="contents">오소플 젠장 ㅠㅠㅠ<br>이거 백엔드는 어떻게 해ㅠㅠㅠ<br>으아아아아ㅏㅇ</b></span>
-                            <div>
-                                <p class="date"> 2020/11/12</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>    
- 
-                <!-- 여기는 댓글 적기 -->
-                <div class="write_comment">
-                    <form method="post">
-                        <textarea></textarea>
-                        <input type="submit" value="추가">
-                    </form>
-                </div>
+                
             </div>
         </div>
     </div>
+    <script src="../javascript/read_post.js"></script>
 </body>
 </html>

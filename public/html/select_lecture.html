@@ -4,89 +4,60 @@
 <head>
     <meta charset="utf-8">
     <title>lecture story</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/tob_bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../css/select_lecture.css">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <div class="header">
-            <img id="logo" src="../imgs/logo-white.png">
+            <a href="board.html"><img id="logo" src="../imgs/logo-white.png"></a>
             <!--학기 드롭다운-->
-            <select>
-                <option selected>2020-2학기</option>
+            <select class="semester" onchange="change_tag()">
+                <option>2020-2학기</option>
                 <option>2020-1학기</option>
                 <option>2019-2학기</option>
                 <option>2019-1학기</option>
             </select>
             <!--검색 바-->
             <div class="search_bar">
-                <form action="./select_lecture.html" method="post">
+                <form action="./select_lecture.html" method="post" onSubmit="register()">
                     <input type="text" id="search" placeholder="추가하고 싶은 과목명을 입력하세요." />
                     <button type="submit" id="btn_search"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <!--아이콘 바-->
             <div class="icons">
-                <button type="button" id="noti"><i class="fa fa-bell fa-2x"></i></button>
-                <button type="button" id="setting"><i class="fa fa-cog fa-2x"></i></button>
-                <button type="button" id="user"><i class="fa fa-user-circle fa-2x"></i></button>
+                <div id="logout-button" onclick="logOut()">Log Out</div>
             </div>
         </div>
         <!-- 여기까지 툴바 -->
         <div class="container">
-            <div class="content">
-                <p>검색어: 통계학</p>
+            <div class="contents-area">
+                <h2>검색어: <span id="search_key">여기에 검색어</span></h2>
 
-                <form>
-                    <ul class="lecture_list">
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (01) - 김이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (02) - 박이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (03) - 이이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (01) - 김이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (02) - 박이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (03) - 이이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (01) - 김이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (02) - 박이화 교수님</a>
-                        </li>
-                        <li>
-                            <input type="radio">
-                            <a href="#">통계학 (03) - 이이화 교수님</a>
-                        </li>
-                    </ul>
-                    <input type="submit" class="lecture_submit" value="등록">
+                <form method="post"></form>
+                <ul class="lecture_list">
+                    <!-- 여기에 검색한 결과가 나타난다 -->
+
+                </ul>
+                <input type="submit" onClick="sendInfo()" class="lecture_submit" value="등록">
                 </form>
+
             </div>
         </div>
 
     </div>
 
-
+    <script type="text/javascript" src="../javascript/select_lecture.js"></script>
 </body>
 
 </html>

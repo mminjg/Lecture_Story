@@ -4,25 +4,12 @@
 }
 .container{
     margin-top: 50px;
-    /* position: absolute;
-    display:  flex;
-    align-items: center;
-    justify-content: center; */
     border: 1px;
-    /* width:600px;
-    height:600px; */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-
-    /* position: absolute;
-    left:50%;
-    top:50%;
-    margin-left:-300px;
-    margin-top:-300px; */
     box-sizing: border-box;
 }
 
@@ -49,6 +36,7 @@ input:focus{
     margin-bottom: 10px;
     padding-left:10px;
     box-sizing: border-box;
+    border-radius: 2px;
 }
 
 .input_num{
@@ -72,6 +60,7 @@ input:focus{
     padding-left:10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border-radius: 2px;
 }
 
 .input_year{
@@ -80,6 +69,7 @@ input:focus{
     margin-bottom: 10px;
     padding-left:10px;
     box-sizing: border-box;
+    border-radius: 2px;
 }
 
 .input_month{
@@ -88,6 +78,7 @@ input:focus{
     margin-bottom: 10px;
     padding-left:10px;
     box-sizing: border-box;
+    border-radius: 2px;
 }
 
 .input_day{
@@ -96,6 +87,7 @@ input:focus{
     margin-bottom: 10px;
     padding-left:10px;
     box-sizing: border-box;
+    border-radius: 2px;
 }
 
 
@@ -110,4 +102,6 @@ input:focus{
     font-size: 100%;
     box-sizing: border-box;
     margin-top: 10px;
+    cursor: pointer;
+    border-radius: 2px;
 }

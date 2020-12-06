@@ -1,15 +1,28 @@
-/* 잘 모르겠어 ㅠㅠㅠㅠ */
-.content{
-    padding: 30px 0;
-    width:80%;
-    margin: 50px auto;
+#chart_div {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #aaaaaa;
+  border-radius: 5px;
 }
-#chart_div{
-    position: relative;
-    top: 50px;
-    float: right;
+.rank_div {
+  text-align: right;
+  padding-bottom: 30px;
+
+  font-size: 20px;
+  font-weight: bold;
 }
-.grade{
-    font-size: 30px;
-    font-weight: bold;
+.total_div {
+  text-align: right;
+  padding-bottom: 30px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+#info {
+  left: 0;
+  right: 0;
+  float: left;
+  margin-left: 10%;
+  text-align: left;
+  line-height: 150%;
 }

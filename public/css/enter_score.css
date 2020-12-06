@@ -9,13 +9,12 @@
     margin: 0 auto;
 }
 .content{
-    
     margin: 0 auto;
-    width: 80%;
+    width: 900px;
 }
 .content form{
     display:block;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 .content .top::after{
     display: block;
@@ -35,8 +34,10 @@
     border: 2px solid #AAAAAA;
     border-radius: 5px;
     float: left;
+    /* 커서 손모양으로 바꿈 */
+    cursor:pointer;
 }
-.content .top button{
+.content .top .submit{
     float: right;
     width: 120px;
     height: 35px;
@@ -47,19 +48,35 @@
     color: white;
     font-weight: bold;
     font-size: 1.1em;
+    cursor: pointer;
+}
+.input_tag {
+    width: 240px;
+    height: 32px;
+    padding: 0 10px;
+    margin-left: 15px;
+    font-size: 10pt;
+    color : #AAAAAA;
+    border: 2px solid #AAAAAA;
+    border-radius: 5px;
+    float: left;
 }
 .content .text{
     height: 50px;
-    margin-top:50px;
 }
+
+.content .text input{
+    outline: none;
+}
+
 .content .text input{
     width:100%; 
     height:100%;
     resize:none;
     background: rgb(228, 228, 228);
     padding: 15px;
-    border-radius: 15px;
-    border: 0px;
+    border-radius: 3px;
+    border: none;
     box-sizing: border-box;
     font-size: 15px;
     line-height: 1.4em;

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "lecture-story-2"
+    "default": "lecture-story",
+    "ls": "lecture-story"
   }
 }

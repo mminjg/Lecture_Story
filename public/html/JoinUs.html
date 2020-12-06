@@ -2,12 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Join Us</title>
+    <title>lecture story</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/JoinUs.css">  
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
     
 </head>
 
@@ -16,7 +18,7 @@
         <form method="post" name="test" id="JoinUsForm">
             <!-- 가장 위의 로고// 이미지-->
             <div>
-                <img class="logo_img" src="../imgs/logo.png">
+                <a href="main.html"><img class="logo_img" src="../imgs/logo.png"></a>
             </div>
             
             <div>
@@ -26,13 +28,13 @@
                 <input class="input_block" id="email" name="Email" type="text" size=40 placeholder="@ewhain.net">
             </div>
 
-            <div>
+            <!-- <div>
                 <p>인증번호</p>
             </div>
             <div>
                 <input class="input_num" type="text" placeholder="인증번호 입력">
                 <button class="button_num" type="button">인증번호 발송</button>
-            </div>
+            </div> -->
 
             <div>
                 <p>비밀번호</p>
@@ -52,19 +54,19 @@
                 <p>이름</p>
             </div>
             <div>
-                <input class="input_block" name="p_name" type="text"  placeholder="이름">
+                <input class="input_block" name="p_name" type="text" id="p_name" placeholder="이름">
             </div>
 
             <div>
                 <p>생년월일</p>
             </div>
             <div>
-                <input class="input_year" type="text" name="p_year" placeholder="년(4자)">
-                <input class="input_month" type="text" name="p_month" placeholder="월">
-                <input class="input_day" type="text" name="p_day" placeholder="일">
+                <input class="input_year" type="text" name="p_year" id="p_year" placeholder="년(4자)">
+                <input class="input_month" type="text" name="p_month" id="p_month" placeholder="월">
+                <input class="input_day" type="text" name="p_day" id="p_day" placeholder="일">
             </div>
             <div>
-                <button type="button" onClick="signUp()" id="btn"  class="submit_button" >제출</button>
+                <button type="submit" id="btn" class="submit_button" >제출</button>
             </div>
         </form>
     </div>

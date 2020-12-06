@@ -1,43 +1,57 @@
 .content{
-    width: 80%;
+    width: 70%;
     margin: 30px auto 50px auto;
 }
 .origin_post{
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: left;
-    font-size: 18px;
-    background-color: #c5c5c5;
+    font-size: 100%;
+    background-color: #dddddd;
     border-radius: 3px;
-    padding: 20px 15px 20px 30px;
+    padding: 13px 15px 10px 15px;
     box-sizing: border-box;
-    border:3px solid  #c5c5c5;
-    border-radius: 10px;
-}
-.edit_button button{
-    text-align: center;
-    border-style: none;
-    font-size: 12px;
-    width: 25px;
-    height:30px;
-    margin-right: 5px;
-    padding:0px;
-    background-color: #c5c5c5;
+    margin-bottom: 30px;
 }
 
-.post{
-    background-color: #eeeeee;
+.content_tag{
+    margin-bottom:10px;
+    color:#0b7915;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.edit_button button{
+    float: right;
+    text-align: center;
+    border-style: none;
+    font-size: 11px;
+    width: 25px;
+    margin-left: 5px;
+    padding:0px;
+    background-color:#dddddd;
+    /* 커서 손모양으로 바꿈 */
+    cursor:pointer;
+}
+
+.edit_button .comment_del{
+    background-color: #f1f1f1;
+    margin:3px;
+}
+
+.comments .post{
+    background-color: #f1f1f1;
     border-radius: 3px;
-    padding: 10px;
+    padding: 13px 15px 10px 15px;
     box-sizing: border-box;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 100%;
 }
 
 .comments li {
     width: 100%;
     height: 100%;
     margin-bottom: 5px;
-    list-style: none;
     text-align: left;
 }
 
@@ -45,30 +59,55 @@
     font-size: 12px;
     margin-top: 20px;
     font-weight: normal;
-    line-height: 22px;
+    line-height: 18px;
 }
 /* 원글의 좋아요&댓글*/
 .like-comment{
-    
+    float: right;
 }
 .like-comment img{
-    width:20px;
-    height:20px;
+    width:15px;
+    height:15px;
     margin-right: 5px;
     box-sizing: border-box;
 }
 
-.write_comment textarea {
-    margin-left:30px;
-    margin-top:15px;
-}
 .write_comment input{
     text-align: center;
     border-style: none;
     width:100%; 
     height:100%;
 }
-/* 이 부분 크기 조절하는 거 모르면 주은이한테 물어보기 지금힘들어서 그만 둠*/
-textarea{
+
+.write_comment{
+    height: auto;
+}
+
+.write_comment textarea {
+    background: #f1f1f1;
+    width:100%;
+    resize: none;
+    height:70px;
+    padding: 13px 15px 10px 15px;
+    border-radius: 3px;
+    border: 0px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    line-height: 150%;
+}
+.write_comment textarea:focus{
     outline: none;
+}
+.write_comment .button{
+    width: 100px;
+    height: 35px;
+    background-color: #00462A;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    float: right;
+    font-size: 100%;
+    /* 커서 손모양으로 바꿈 */
+    cursor:pointer;
 }

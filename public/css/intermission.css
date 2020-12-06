@@ -1,0 +1,39 @@
+
+body {
+    height: 100%;
+    background-color: #00462A;
+}
+
+img {
+    position: relative;
+    top: 130px;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+h1 {
+    position: relative;
+    top: 160px;
+    color: white;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px;
+}
+
+button {
+    position: relative;
+    top: 175px;
+    display: block;
+    width: 170px;
+    height: 45px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 20px;
+    cursor: pointer;
+}
