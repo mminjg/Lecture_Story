@@ -1,4 +1,5 @@
 # Lecture_Story
+2020-2 오픈sw
 New Lecture Review Forum
 박주은 1971019
 최수정 1971051
