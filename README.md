@@ -30,7 +30,7 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#URL">URL</a></li>
-    <li><a href="#Main Features">Main Featurese</a></li>
+    <li><a href="#Main Features">Main Features</a></li>
   </ol>
 </details>
 
