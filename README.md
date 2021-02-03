@@ -76,7 +76,7 @@ supported browser: chrome
 - Enter Score with tag only once
 - Check ranks only when score is entered
 
-### Periodic course evaluation with Timeline
+### Periodic Course Evaluation with Timeline
 
 ![image](gif/evaluation.gif)
 
