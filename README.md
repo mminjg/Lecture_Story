@@ -56,10 +56,14 @@ supported browser: chrome
 
 ### Email Authentication & Course Bookmark
 
+![image](gif/email.gif)
+
 - Sign up through ewhain email verification (@ewhain.net)
 - Add lecture bookmark
 
 ### Lecture Forum with Timeline
+
+![image](gif/timeline.gif)
 
 - Click tag, view articles by topic(tag)
 - Write postings with a tag, edit, and delete
@@ -67,10 +71,14 @@ supported browser: chrome
 
 ### Score Statistics
 
+![image](gif/score.gif)
+
 - Enter Score with tag only once
 - Check ranks only when score is entered
 
 ### Periodic course evaluation with Timeline
+
+![image](gif/evaluation.gif)
 
 - Write quarterly review
 - Check the review of last semester
