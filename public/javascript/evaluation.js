@@ -16,7 +16,7 @@ var firebaseConfig = {
   function logOut(){
       firebase.auth().signOut().then(function() {
           // Sign-out successful.
-          window.location.href="login.html";
+          window.location.href="main.html";
       }).catch(function(error) {
           // An error happened.
       });
@@ -144,8 +144,14 @@ var firebaseConfig = {
   
       // 바뀐 학기의 타임라인과 포스팅 기본값(최근) 로드
       docRef = db.collection(semester).doc(courseNO+"-"+prof).collection("evaluation");
-      tagName="전체";
       loadPostings(docRef);
+      
+      // 결과 로딩 시 태그 선택은 전체로
+      var everyTag = document.querySelectorAll(".tag");
+      for(var i=0; i<everyTag.length; i++){
+          everyTag[i].style.fontWeight="normal";
+      }
+      tagName="전체";
       document.querySelector(".tag").style.fontWeight = "bold";   //"전체" 태그를 굵게
   }
   

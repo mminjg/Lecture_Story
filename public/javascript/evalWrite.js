@@ -16,7 +16,7 @@ var ui = firebase.auth();
 function logOut(){
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        window.location.href="login.html";
+        window.location.href="main.html";
     }).catch(function(error) {
         // An error happened.
     });

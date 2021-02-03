@@ -23,7 +23,7 @@ html, body, .container {
 }
 .left .desc{
     margin: 0 auto;
-    padding-top: 180px;
+    padding-top: 150px;
 }
 .left .desc .text1 {
     font-size: 30px;
@@ -31,35 +31,69 @@ html, body, .container {
     line-height: 45px;
     font-weight: bold;
 }
+
 .left .button {
-    margin: 150px 0;
+    margin: 100px 0;
 }
+
+/* 회원가입 버튼 */
 .left .button a{
     display: block;
-    width: 60%;
+    width: 400px;
     padding: 15px 10px;
-    margin: 15px auto;
+    margin: 15px auto; 
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
-    border: 2px #00462A solid;
+    border: 2px solid;
     font-size: 20px;
 }
 .left .button .join{
-    background-color: #00462A;
-    color: white;
+    background-color: white;
+    color: #00462A;
     text-decoration: none;
 }
 .left .button .join:hover{
     text-decoration: underline;
 }
-.left .button .login{
-    color: #00462A;
+
+/* 로그인 버튼*/
+.login_button{
+    background-color: #00462A;
+    width: 424px;
+    height: 54px;
+    text-align: center;
+    color: #ffffff;
+    border-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.left .button .login_button{
+    color: white;
     text-decoration: none;
 }
-.left .button .login:hover{
+.left .button .login_button:hover{
     text-decoration: underline;
 }
+/* id pw */
+.id_pw{
+    width: 424px;
+    height: 45px;
+    margin-bottom: 15px;
+    padding-left:10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: solid 1px #aaaaaa;
+}
+
+input:focus{
+    outline: none;
+}
+
+/* 오른쪽 파트 */
 .right{
     height: 100%;
     position: relative;
@@ -86,5 +120,6 @@ html, body, .container {
 
 .right img{
     position: absolute;
-    top: 150px;
+    top: 200px;
 }
+

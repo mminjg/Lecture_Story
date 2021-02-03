@@ -21,8 +21,9 @@ input{
     border: solid 1px #aaaaaa;
 }
 /* 입력칸의 회색빛 내용 */
-input::placeholder{
+#email::placeholder{
     text-align: right;
+    padding-right: 10px;
 }
 
 input:focus{

@@ -6,6 +6,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo-title.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,8 +18,11 @@
             </div>
             <div class="button">
                 <ul>
+                    <!-- id 비번 로그인 회원가입 -->
+                    <li><div><input class="id_pw" type="text" placeholder="이메일" id="email_field"></div></li>
+                    <li><div><input class="id_pw" type="password" placeholder="비밀번호" id="password_field"></div> </li>
+                    <li><div><input class="login_button" type="button" value="LOGIN" onclick="login()"></div></li>
                     <li><a class="join" href="./JoinUs.html">JOIN US !</a></li>
-                    <li><a class="login" href="./login.html">LOGIN</a></li>
                 </ul>
             </div>
         </div>
@@ -28,5 +33,6 @@
             <p class="text3">Get into records of<br>what happened in the past!</p>
         </div>
     </div>
+    <script src="../javascript/main.js"></script>
 </body>
 </html>

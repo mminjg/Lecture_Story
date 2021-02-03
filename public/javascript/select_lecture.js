@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 function logOut() {
   firebase.auth().signOut().then(function () {
     // Sign-out successful.
-    window.location.href = "login.html";
+    window.location.href = "main.html";
   }).catch(function (error) {
     // An error happened.
   });
@@ -76,7 +76,8 @@ function show_lec() {
   //과목명에 영어가 포함되는 경우 전부 대문자이므로 toUpperCase()사용
   var upper_storageKey=storageKey.toUpperCase();
   var ref = db.collection(semester);
-  ref.get().then(function (querySnapshot) {
+  //문서 정렬기준: 교과목명 - 
+  db.collection(semester).orderBy("교과목명").orderBy("분반").get().then(function (querySnapshot) {
     var arr = new Array;
     querySnapshot.forEach((doc) => {
       if(doc.data().교과목명.includes(upper_storageKey)){

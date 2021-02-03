@@ -43,7 +43,7 @@ function logOut() {
     .signOut()
     .then(function () {
       // Sign-out successful.
-      window.location.href = "login.html";
+      window.location.href = "main.html";
     })
     .catch(function (error) {
       // An error happened.
@@ -115,12 +115,8 @@ loadTimelineTags();
 function check_user(evt) {
   var tagName = evt.currentTarget.innerText;
   tagName = tagName.substring(1, tagName.length);
-  // 선택한 태그 글씨 진하게 만들기
-  var everyTag = document.querySelectorAll(".tag");
-  for (var i = 0; i < everyTag.length; i++) {
-    everyTag[i].style.fontWeight = "normal";
-  }
-  evt.currentTarget.style.fontWeight = "bold";
+  var curr = evt.currentTarget;
+  
   // 현재 진행 중인 학기라면 조건에 따라 성적 그래프를 공개함
   if(semester === "2020_2학기") {
     // 선택한 tag와 useId 일치하는 성적이 있는지 확인
@@ -142,6 +138,13 @@ function check_user(evt) {
         // 그래프는 두 명 이상 부터 그리기 가능
         alert("두 명 이상 성적을 입력해야 그래프를 확인할 수 있습니다.");
       } else {
+        // 선택한 태그 글씨 진하게 만들기
+        var everyTag = document.querySelectorAll(".tag");
+        for (var i = 0; i < everyTag.length; i++) {
+          everyTag[i].style.fontWeight = "normal";
+        }
+        curr.style.fontWeight = "bold";
+
         // tag 성적 정보 가져오기
         ref.where("tag", "==", tagName).get().then((querySnapshot) => {
           var arr = new Array();
@@ -172,6 +175,12 @@ function check_user(evt) {
       }
     });
   } else{ // 지난학기라면 성적 그래프를 공개함
+    // 선택한 태그 글씨 진하게 만들기
+    var everyTag = document.querySelectorAll(".tag");
+    for (var i = 0; i < everyTag.length; i++) {
+      everyTag[i].style.fontWeight = "normal";
+    }
+    curr.style.fontWeight = "bold";
     // tag 성적 정보 가져오기
     ref.where("tag", "==", tagName).get().then((querySnapshot) => {
       var arr = new Array();

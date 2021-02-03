@@ -19,7 +19,7 @@ function logOut() {
     .signOut()
     .then(function () {
       // Sign-out successful.
-      window.location.href = "login.html";
+      window.location.href = "main.html";
     })
     .catch(function (error) {
       // An error happened.
@@ -128,5 +128,18 @@ function sub() {
           window.location.href = "timeline.html";
         });
     }
+  }
+}
+
+/* 태그 추가를 선택했을 때만 태그 입력창 보이게 */
+function show_hide_input(){
+  var ttag = document.getElementById("select_tag").value;
+  var tag_input = document.getElementById("add_tag");
+  
+  if(ttag === "태그 추가"){
+    tag_input.style.display = "block";
+  }
+  else{
+    tag_input.style.display = "none";
   }
 }

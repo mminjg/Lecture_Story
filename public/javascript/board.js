@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 function logOut() {
     firebase.auth().signOut().then(function () {
         // Sign-out successful.
-        window.location.href = "login.html";
+        window.location.href = "main.html";
     }).catch(function (error) {
         // An error happened.
     });
@@ -119,3 +119,16 @@ firebase.auth().onAuthStateChanged(function (user) {
         }
     }
 });
+
+// 안내 팝업창
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".close-button");
+
+closeButton.addEventListener("click", function(){
+    modal.style.display ="none";
+    console.log("bb");
+});
+
+window.onload = function(){
+    modal.style.display ="block";
+}
