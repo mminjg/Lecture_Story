@@ -21,7 +21,7 @@
 
 1971002 강민지([mminjg](https://github.com/mminjg))  
 1971019 박주은([hoit1302](https://github.com/hoit1302))  
-1971039 이진경([dooli197103](https://github.com/dooli197103), lkh4317)  
+1971039 이진경([dooli1971039](https://github.com/dooli1971039), lkh4317)  
 1971051 최수정([sujeong000](https://github.com/sujeong000))
 
 <br>
